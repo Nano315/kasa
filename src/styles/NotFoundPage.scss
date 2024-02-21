@@ -1,0 +1,25 @@
+.not-found-container {
+  text-align: center;
+  color: #ff6060;
+  margin-bottom: 139px;
+
+  .status-code {
+    font-size: 288px;
+    font-weight: 700;
+    margin: 0px;
+  }
+
+  .message {
+    font-size: 36px;
+    font-weight: 500;
+    margin-bottom: 139px;
+    margin-top: 80px;
+  }
+
+  .home-link {
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: none;
+    text-decoration: underline;
+  }
+}
