@@ -1,0 +1,21 @@
+.housing-card {
+    width: 340px;
+    height: 340px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end; // Aligner le titre en bas de la carte
+    border-radius: 10px;
+    overflow: hidden; // Assure que le border-radius est appliqué sur l'image de fond
+    cursor: pointer;
+  
+    .housing-title {
+        margin: 0;
+        color: #FFF;
+        font-size: 18px;
+        font-weight: 700;
+
+        padding: 20px;
+    }
+  }
+  

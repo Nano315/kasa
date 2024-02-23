@@ -1,0 +1,24 @@
+.gallery {
+  width: 1240px;
+  margin: 50px auto; // Centre la galerie si la page est plus large que le contenu
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); // 3 colonnes
+  gap: 60px; // Espacement entre les cartes
+  padding: 60px; // Espacement autour des cartes à l'intérieur du conteneur gallery
+  background: #f6f6f6;
+  border-radius: 25px;
+  box-sizing: border-box; // Assure que le padding est inclus dans la largeur/hauteur
+
+  @media (max-width: 1280px) {
+    grid-template-columns: repeat(
+      2,
+      1fr
+    ); // 2 colonnes pour les écrans plus petits
+  }
+
+  @media (max-width: 720px) {
+    grid-template-columns: 1fr; // 1 colonne pour les écrans très petits
+    padding: 30px; // Réduit l'espacement dans un souci de réactivité
+  }
+}
