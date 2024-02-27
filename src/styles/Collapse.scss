@@ -44,6 +44,22 @@
         font-size: 18px;
         font-weight: 400;
       }
+
+      ul {
+        margin: 0;
+        margin-top: 3px;
+        padding: 20px;
+        list-style-type: none;
+      }
+
+      li {
+        margin-bottom: 3px;
+        font-size: 18px;
+        font-weight: 400;
+      }
     }
   }
-  
+
+  .collapse-about {
+    width: 1023px;
+  }

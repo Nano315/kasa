@@ -2,19 +2,18 @@ import React, { useState, useRef, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import '../styles/Collapse.scss';
 
-const Collapse = ({ title, children }) => {
+const Collapse = ({ title, children, className }) => {
     const [isOpen, setIsOpen] = useState(false);
     const contentRef = useRef(null);
 
     useEffect(() => {
+        const content = contentRef.current;
         if (isOpen) {
             // Mettre à jour la hauteur après que le contenu est rendu
-            const content = contentRef.current;
             if (content) {
                 content.style.height = `${content.scrollHeight}px`;
             }
         } else {
-            const content = contentRef.current;
             content.style.height = `0px`;
         }
     }, [isOpen]); // Se déclenche quand isOpen change
@@ -24,7 +23,7 @@ const Collapse = ({ title, children }) => {
     };
 
     return (
-        <div className={`collapse ${isOpen ? 'open' : ''}`}>
+        <div className={`collapse ${className}`}>
             <button className="collapse-toggle" onClick={toggleCollapse}>
                 <span className="collapse-title">{title}</span>
                 <svg xmlns="http://www.w3.org/2000/svg" width="33" height="32" viewBox="0 0 33 32" fill="none" className={`collapse-icon ${isOpen ? 'rotate' : ''}`}>
@@ -40,7 +39,7 @@ const Collapse = ({ title, children }) => {
 
 Collapse.propTypes = {
     title: PropTypes.string.isRequired,
-    children: PropTypes.node.isRequired,
+    children: PropTypes.node.isRequired
 };
 
 export default Collapse;
