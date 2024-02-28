@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import Slideshow from '../components/Slideshow';
-import listingsData from '../data/listings.json'; // Assume listings.json is in the data directory
+import listingsData from '../data/listings.json';
 import Collapse from '../components/Collapse';
-import '../styles/HousingPage.scss'
+import '../styles/HousingPage.scss';
+import Rate from '../components/Rate';
 
 const HousingPage = () => {
   const [housingData, setHousingData] = useState(null);
   let { id } = useParams();
 
   useEffect(() => {
-    // If the listings data is an array
     const listing = listingsData.find(listing => listing.id === id);
     setHousingData(listing);
   }, [id]);
@@ -35,7 +35,7 @@ const HousingPage = () => {
             <h2 className='name'>{housingData.host.name}</h2>
             <img src={housingData.host.picture} alt={housingData.host.name} />
           </div>
-          <p>Rating: {housingData.rating}</p>
+          <Rate rating={housingData.rating} />
         </div>
       </div>
       <div className='collapses'>

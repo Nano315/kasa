@@ -41,11 +41,16 @@
 
     .name-picture {
       display: flex;
+      justify-content: right;
+      align-items: center;
+      margin-bottom: 5px;
 
       .name {
         color: #ff6060;
         font-size: 18px;
         font-weight: 500;
+        width: 40%;
+        padding-right: 5px;
       }
 
       img {
