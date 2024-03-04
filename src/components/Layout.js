@@ -2,7 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import logo from '../styles/assets/logo.png';
 import logo_negatif from '../styles/assets/logo_negatif.png';
-import '../styles/Layout.scss';
+import '../styles/Components/Layout.scss';
 
 const Layout = ({ children }) => {
     return (

@@ -1,0 +1,51 @@
+.gallery {
+  width: 1240px;
+  margin: 50px auto; // Centre la galerie si la page est plus large que le contenu
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); // 3 colonnes
+  gap: 60px; // Espacement entre les cartes
+  padding: 60px; // Espacement autour des cartes à l'intérieur du conteneur gallery
+  background: #f6f6f6;
+  border-radius: 25px;
+  box-sizing: border-box; // Assure que le padding est inclus dans la largeur/hauteur
+
+  .housing-card {
+    width: 340px;
+    height: 340px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end; // Aligner le titre en bas de la carte
+    border-radius: 10px;
+    overflow: hidden; // Assure que le border-radius est appliqué sur l'image de fond
+    cursor: pointer;
+  
+    .housing-title {
+        margin: 0;
+        color: #FFF;
+        font-size: 18px;
+        font-weight: 700;
+        padding: 20px;
+    }
+  }
+  
+}
+
+@media (max-width: 375px) {
+  .gallery {
+    width: 335px;
+    margin: 20px auto; // Centre la galerie si la page est plus large que le contenu
+  
+    grid-template-columns: repeat(1, 1fr); // 3 colonnes
+    gap: 20px; // Espacement entre les cartes
+    padding: 0px; // Espacement autour des cartes à l'intérieur du conteneur gallery
+    background: #fff;
+  
+    .housing-card {
+      width: 335px;
+      height: 255px;
+    }
+    
+  }
+}

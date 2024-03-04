@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import listings from '../data/listings.json'; // chemin d'accès à ajuster
-import '../styles/Slideshow.scss';
+import listings from '../data/listings.json';
+import '../styles/Components/Slideshow.scss';
 
 const Slideshow = ({ housingId }) => {
   const [currentIndex, setCurrentIndex] = useState(0);

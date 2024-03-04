@@ -18,6 +18,7 @@ ReactDOM.render(
           <Route path="/about" element={<AboutPage />} />
           <Route path="/housing/:id" element={<HousingPage />} />
           <Route path="*" element={<NotFoundPage />} />
+          <Route path="/not-found" element={<NotFoundPage />} />
         </Routes>
       </Layout>
     </Router>

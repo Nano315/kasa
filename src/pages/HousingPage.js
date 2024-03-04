@@ -1,22 +1,29 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import Slideshow from '../components/Slideshow';
 import listingsData from '../data/listings.json';
 import Collapse from '../components/Collapse';
-import '../styles/HousingPage.scss';
+import '../styles/Pages/HousingPage.scss';
 import Rate from '../components/Rate';
 
 const HousingPage = () => {
   const [housingData, setHousingData] = useState(null);
+  const navigate = useNavigate();
   let { id } = useParams();
 
   useEffect(() => {
     const listing = listingsData.find(listing => listing.id === id);
-    setHousingData(listing);
-  }, [id]);
+    if (!listing) {
+      // Si aucun logement n'a été trouvé, redirigez vers la page NotFoundPage
+      navigate('/not-found');
+    } else {
+      setHousingData(listing);
+    }
+  }, [id, navigate]);
 
   if (!housingData) {
-    return <div>Loading...</div>;
+    // Si housingData est toujours null, retournez null
+    return null;
   }
 
   return (
