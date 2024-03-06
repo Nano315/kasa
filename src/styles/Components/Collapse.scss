@@ -1,69 +1,95 @@
 .collapse {
-    margin: 20px 0;
+  margin: 20px 0;
+  width: 100%;
+  margin: 30px auto;
+
+  .collapse-toggle {
     width: 100%;
-    margin: 30px auto;
-  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ff6060;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+
+    .collapse-title {
+      font-size: 24px;
+      font-weight: 700;
+      color: white;
+    }
+
+    .collapse-icon {
+      transform: rotate(0);
+      transition: transform 0.3s ease-in-out;
+
+      &.rotate {
+        transform: rotate(-180deg);
+      }
+    }
+  }
+
+  .collapse-content {
+    background: #f5f5f5;
+    border-radius: 0 0 5px 5px;
+    color: black;
+    overflow: hidden;
+    transition: height ease 0.4s;
+
+    p {
+      margin: 0;
+      padding: 20px;
+      font-size: 18px;
+      font-weight: 400;
+    }
+
+    ul {
+      margin: 0;
+      margin-top: 3px;
+      padding: 20px;
+      list-style-type: none;
+    }
+
+    li {
+      margin-bottom: 3px;
+      font-size: 18px;
+      font-weight: 400;
+    }
+  }
+}
+
+.collapse-about {
+  width: 1023px;
+}
+
+.collapse-housing {
+  margin: 0;
+}
+
+@media (max-width: 376px) {
+  .collapse {
+    max-width: 335px;
+    margin: 20px auto;
+
     .collapse-toggle {
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: #ff6060;
-      border: none;
-      padding: 10px;
-      border-radius: 5px;
-      cursor: pointer;
-      outline: none;
-  
+      height: 30px;
+
       .collapse-title {
-        font-size: 24px;
-        font-weight: 700;
-        color: white;
+        font-size: 13px;
       }
-  
+
       .collapse-icon {
-        transform: rotate(0);
-        transition: transform 0.3s ease-in-out;
-  
-        &.rotate {
-          transform: rotate(-180deg);
-        }
+        width: 25px;
       }
     }
-  
+
     .collapse-content {
-      background: #f5f5f5;
-      border-radius: 0 0 5px 5px;
-      color: black;
-      overflow: hidden;
-      transition: height ease 0.4s;
-  
       p {
-        margin: 0;
-        padding: 20px;
-        font-size: 18px;
-        font-weight: 400;
-      }
-
-      ul {
-        margin: 0;
-        margin-top: 3px;
-        padding: 20px;
-        list-style-type: none;
-      }
-
-      li {
-        margin-bottom: 3px;
-        font-size: 18px;
-        font-weight: 400;
+        font-size: 12px;
+        padding: 15px;
       }
     }
   }
-
-  .collapse-about {
-    width: 1023px;
-  }
-
-  .collapse-housing {
-    margin: 0;
-  }
+}

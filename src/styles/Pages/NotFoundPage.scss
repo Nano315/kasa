@@ -23,3 +23,20 @@
     text-decoration: underline;
   }
 }
+
+@media (max-width: 376px) {
+  .not-found-container {
+    .status-code {
+      margin-top: 100px;
+      font-size: 96px;
+    }
+
+    .message {
+      font-size: 18px;
+    }
+
+    .home-link {
+      font-size: 14px;
+    }
+  }
+}
