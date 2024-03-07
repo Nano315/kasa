@@ -5,7 +5,7 @@ import '../styles/Components/Banner.scss';
 const Banner = ({ image, title }) => {
   return (
     <div className="banner" style={{ backgroundImage: `url(${image})` }}>
-      {title && <h1 className="banner-title">{title}</h1>}
+      {title && <h1 className="banner-title" dangerouslySetInnerHTML={{ __html: title }}></h1>}
     </div>
   );
 };

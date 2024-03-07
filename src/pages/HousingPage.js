@@ -33,9 +33,11 @@ const HousingPage = () => {
         <div className='title-locate-tags'>
           <h1 className='title'>{housingData.title}</h1>
           <p className='locate'>{housingData.location}</p>
-          {housingData.tags.map((tag, index) => (
-            <span key={index} className='tags'>{tag}</span>
-          ))}
+          <div className='tags-container'>
+            {housingData.tags.map((tag, index) => (
+              <span key={index} className='tags'>{tag}</span>
+            ))}
+          </div>
         </div>
         <div className='name-picture-rate'>
           <div className='name-picture'>
