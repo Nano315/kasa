@@ -8,6 +8,7 @@ const HomePage = () => {
   return (
     <>
       <Banner image={bannerImage1} title="Chez vous,<span class='mobile-break'></span> partout et ailleurs"/>
+      
       <Gallery listings={listings} />
     </>
   );
