@@ -46,27 +46,27 @@
   .slideshow {
     border-radius: 10px;
     margin: 0 auto;
-    max-width: 335px; /* Largeur ajustée pour les petits écrans */
-    max-height: 255px; /* Hauteur ajustée pour les petits écrans */
+    max-width: 335px; 
+    max-height: 255px; 
 
     .arrow {
       svg {
-        width: 24px; /* Réduction de la taille des flèches */
+        width: 24px;
         height: 24px;
       }
 
       &.left {
-        left: 10px; /* Position ajustée pour les petits écrans */
+        left: 10px; 
       }
 
       &.right {
-        right: 10px; /* Position ajustée pour les petits écrans */
+        right: 10px;
       }
     }
 
     img {
-      max-width: 335px; /* Largeur ajustée pour les petits écrans */
-      max-height: 255px; /* Hauteur ajustée pour les petits écrans */
+      max-width: 335px;
+      max-height: 255px; 
       object-fit: cover;
     }
 

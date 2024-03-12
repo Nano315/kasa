@@ -59,31 +59,31 @@
   margin: 0px 50px;
 }
 
-/* Media Queries pour écrans jusqu'à 375px de large */
+
 @media (max-width: 376px) {
   .header {
     width: 335px;
-    margin: 20px auto; /* Marge réduite pour le header */
+    margin: 20px auto; 
     .header-logo {
-      height: 30px; /* Réduction de la taille du logo */
+      height: 30px;
     }
     .navigation .nav-link {
-      margin-right: 15px; /* Réduction de l'espace entre les liens */
-      font-size: 14px; /* Réduction de la taille de police des liens */
+      margin-right: 15px; 
+      font-size: 14px;
     }
   }
 
   .main-content {
-    margin: 0 auto; /* Marge réduite pour le contenu principal */
+    margin: 0 auto; 
   }
 
   .footer {
-    padding: 20px 15px; /* Padding réduit pour le footer */
+    padding: 20px 15px;
     .footer-content .footer-logo {
-      height: 20px; /* Réduction de la taille du logo du footer */
+      height: 20px; 
     }
     .footer-content p {
-      font-size: 12px; /* Réduction de la taille de police du texte du footer */
+      font-size: 12px;
     }
   }
 }
